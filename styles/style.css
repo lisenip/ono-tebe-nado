@@ -7,6 +7,7 @@ body {
   margin: 92px auto 96px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
 }
 
 .header__menu {
@@ -53,9 +54,12 @@ body {
   height: 105px;
 }
 
+.header__address {
+  justify-self: end;
+}
+
 .address {
   margin: 5px 25px 0 0;
-  justify-self: end;
   width: 240px;
 }
 
@@ -100,7 +104,7 @@ body {
   position: relative;
   z-index: 10;
   display: grid;
-  grid-template-rows: 115px 100px 100px;
+  grid-template-rows: min-content 1fr 1fr;
   color: #fff;
   width: 1000px;  
   margin: 0 auto;
@@ -298,14 +302,13 @@ body {
 .footer {
   width: 1000px;
   margin: 0 auto 88px auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
 }
 
 .footer__menu {
-  text-indent: -25px;
+  justify-self: start;
   margin-top: 6px;
-  width: 150px;
 }
 
 .footer__menu-list {
@@ -331,7 +334,7 @@ body {
   margin-top: 6px;
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 48px;
 }
 
